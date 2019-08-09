@@ -1,0 +1,28 @@
+{
+  "name": "typescript-grpc-knex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "tsc -p ./client/src",
+    "build:server": "tsc -p ./server/src",
+    "build": "concurrently npm:build:*",
+    "start:client": "node ./client/build/app.js",
+    "start:server": "node ./server/build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.1",
+    "@types/express": "^4.17.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
+    "google-protobuf": "^3.9.1",
+    "grpc": "^1.22.2",
+    "knex": "^0.19.1",
+    "pg": "^7.12.0",
+    "typescript": "^3.5.3"
+  }
+}
